@@ -1,6 +1,6 @@
 <template>
-  <section class="root" :class="{'mini-root' : $mq === 'md'}">
-    <div class="cardsContainer" :class="{'centered' : $mq === 'md'}">
+  <section class="root" :class="{'mini-root' : $mq !== 'lg'}">
+    <div class="cardsContainer" :class="{'centered' : $mq !== 'lg'}">
       <div v-for="coin in coins" v-bind:key="coin.time">
         <CoinCard :coin="coin" />
       </div>
